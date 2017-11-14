@@ -1,0 +1,27 @@
+Function=xamarin_timezone_get_data
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/mscorlib.dll
+Function=CreateZStream
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/System.dll
+Function=UIApplicationMain
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/htagtech/Documents/prasanna/OrbisHealth/Thinkdocotor/iOS/obj/iPhone/Debug/device-builds/ipad5.4-11.0.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=mono_pmip

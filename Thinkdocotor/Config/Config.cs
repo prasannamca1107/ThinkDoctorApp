@@ -31,6 +31,8 @@ namespace ThinkDoctor
         public static bool roomsaveflag = false;
         public static bool roomeditflag = false;
 
+		public static bool test = false;
+
 
 		public static string Api = "http://178.238.139.243/ThinkdocotorApi/api/DoctorRegsApi";
 
