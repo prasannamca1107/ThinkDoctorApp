@@ -3,8 +3,7 @@ namespace Thinkdocotor.Models
 {
     public class UserSettingPageDetails
     {
-        public UserSettingPageDetails()
-        {
-        }
-    }
+		public user_personal_details user_personal_details { get; set; }
+		
+	}
 }
