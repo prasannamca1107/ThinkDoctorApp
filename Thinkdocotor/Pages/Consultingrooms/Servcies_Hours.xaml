@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Thinkdoctor.Servcies_Hours" xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView">
+
+        
+        <ScrollView>
+        <StackLayout x:Name="main">
+             <StackLayout x:Name="addroommain">
+            
+                            
+            </StackLayout>
+
+            <StackLayout x:Name="servicesstk">
+            
+                            
+        </StackLayout>
+                <controls:FlowListView x:Name="myListserv" 
+                          
+                           HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Fill"
+                            SeparatorVisibility="None"
+                            FlowColumnCount="2"
+                           HasUnevenRows="false"
+                           FlowItemTapped="myListserv_OnFlowItemTapped"
+                           BackgroundColor="Transparent" 
+                            HeightRequest="100"
+                           >
+
+                <controls:FlowListView.FlowColumnTemplate >
+        <DataTemplate >
+
+         <Frame HorizontalOptions="Start" BackgroundColor="#2196F3" OutlineColor="Transparent" Padding="10" HasShadow="false">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding servicesName}" HorizontalOptions="Start" />
+                                <Image Source="delete1.png" HorizontalOptions="End"></Image>
+                                </StackLayout>
+                            
+                    </Frame>
+        
+        </DataTemplate>
+      </controls:FlowListView.FlowColumnTemplate>
+       
+    </controls:FlowListView>
+            
+   
+
+            <StackLayout x:Name="consultinghours">
+            
+                            
+            </StackLayout>
+            <StackLayout x:Name="stkmoredetails">
+            
+                            
+            </StackLayout>
+
+    
+        
+
+            
+            
+
+            
+  </StackLayout>
+        
+        </ScrollView>
+</ContentPage>

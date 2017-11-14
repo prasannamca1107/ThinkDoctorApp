@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{393873BB-8D20-4532-8F19-E35AD91A95C0}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Thinkdocotor.Droid</RootNamespace>
+    <AssemblyName>Thinkdocotor.Droid</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\packages\Xamarin.Android.Support.Annotations.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Transition">
+      <HintPath>..\packages\Xamarin.Android.Support.Transition.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Transition.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.Palette">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.Palette.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.Palette.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Droid">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\MonoAndroid\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Messier16.Forms.Android.Controls">
+      <HintPath>..\packages\Messier16.Forms.Controls.1.1.0\lib\MonoAndroid10\Messier16.Forms.Android.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Messier16.Forms.Controls">
+      <HintPath>..\packages\Messier16.Forms.Controls.1.1.0\lib\MonoAndroid10\Messier16.Forms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="BottomNavigationBar">
+      <HintPath>..\packages\BottomNavigationBar.1.1.1\lib\MonoAndroid403\BottomNavigationBar.dll</HintPath>
+    </Reference>
+    <Reference Include="AsNum.XFControls">
+      <HintPath>..\packages\XFControls.1.0.0.6\lib\MonoAndroid\AsNum.XFControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AsNum.XFControls.Droid">
+      <HintPath>..\packages\XFControls.1.0.0.6\lib\MonoAndroid\AsNum.XFControls.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\MonoAndroid10\Syncfusion.SfAutoComplete.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\MonoAndroid10\Syncfusion.SfAutoComplete.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\MonoAndroid10\Syncfusion.SfAutoComplete.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Xfx.Controls">
+      <HintPath>..\packages\Xfx.Controls.1.0.4\lib\MonoAndroid\Xfx.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Xfx.Controls.Droid">
+      <HintPath>..\packages\Xfx.Controls.1.0.4\lib\MonoAndroid\Xfx.Controls.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.CurrentActivity">
+      <HintPath>..\packages\Plugin.CurrentActivity.1.0.1\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\MonoAndroid10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\MonoAndroid10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\MonoAndroid10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\MonoAndroid10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thinkdocotor\Thinkdocotor.csproj">
+      <Project>{9BF4DE40-0674-4E6A-B1C4-E001B090383B}</Project>
+      <Name>Thinkdocotor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\UnderlineRenderer.cs" />
+    <Compile Include="Renderer\MyEntryRenderer.cs" />
+    <Compile Include="Renderer\CustomFrameRendererDroid.cs" />
+    <Compile Include="Renderer\RoundImageRenderer.cs" />
+    <Compile Include="Renderer\IconViewRenderer.cs" />
+    <Compile Include="Renderer\MainPageRenderer.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="Renderer\DataViewer.cs" />
+    <Compile Include="Renderer\filepicker\CrossFilePicker.cs" />
+    <Compile Include="Renderer\filepicker\FilePickerActivity.cs" />
+    <Compile Include="Renderer\filepicker\FilePickerImplementation.cs" />
+    <Compile Include="Renderer\filepicker\IOUtil.cs" />
+    <Compile Include="Renderer\GradientPageRenderer.cs" />
+    <Compile Include="Renderer\DropDownMenuRender_Android.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Renderer\MySrollRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\ThinkdoctorLogo.png" />
+    <AndroidResource Include="Resources\drawable\usericon.png" />
+    <AndroidResource Include="Resources\drawable\iconpasw.png" />
+    <AndroidResource Include="Resources\drawable\line.png" />
+    <AndroidResource Include="Resources\drawable\Bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\iconpasw.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\usericon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconpasw.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\usericon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\iconpasw.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\usericon.png" />
+    <AndroidResource Include="Resources\drawable\hometab.png" />
+    <AndroidResource Include="Resources\drawable\diarytab.png" />
+    <AndroidResource Include="Resources\drawable\historytab.png" />
+    <AndroidResource Include="Resources\drawable\accounts.png" />
+    <AndroidResource Include="Resources\drawable\diarynew.png" />
+    <AndroidResource Include="Resources\drawable\manage_patients.png" />
+    <AndroidResource Include="Resources\drawable\Doc.png" />
+    <AndroidResource Include="Resources\drawable\reports.png" />
+    <AndroidResource Include="Resources\drawable\patients.png" />
+    <AndroidResource Include="Resources\drawable\hamburger.png" />
+    <AndroidResource Include="Resources\drawable\userdefault.png" />
+    <AndroidResource Include="Resources\drawable\arrowNxt.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_contact.png" />
+    <AndroidResource Include="Resources\drawable\Nextpage.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\radiooff.png" />
+    <AndroidResource Include="Resources\drawable\radioon.png" />
+    <AndroidResource Include="Resources\drawable\editdate.png" />
+    <AndroidResource Include="Resources\drawable\ic_checkmark_active.png" />
+    <AndroidResource Include="Resources\drawable\ic_checkmark_unactive.png" />
+    <AndroidResource Include="Resources\drawable\acc1.png" />
+    <AndroidResource Include="Resources\drawable\acc1234.png" />
+    <AndroidResource Include="Resources\drawable\account.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\add1.png" />
+    <AndroidResource Include="Resources\drawable\add2.png" />
+    <AndroidResource Include="Resources\drawable\add11.png" />
+    <AndroidResource Include="Resources\drawable\add21.png" />
+    <AndroidResource Include="Resources\drawable\add123.png" />
+    <AndroidResource Include="Resources\drawable\addclinic.png" />
+    <AndroidResource Include="Resources\drawable\addfile.png" />
+    <AndroidResource Include="Resources\drawable\addhealth.png" />
+    <AndroidResource Include="Resources\drawable\addphoto.png" />
+    <AndroidResource Include="Resources\drawable\address.png" />
+    <AndroidResource Include="Resources\drawable\addtoolbar.png" />
+    <AndroidResource Include="Resources\drawable\admin.png" />
+    <AndroidResource Include="Resources\drawable\admin1.png" />
+    <AndroidResource Include="Resources\drawable\alert1234.png" />
+    <AndroidResource Include="Resources\drawable\Allergies.png" />
+    <AndroidResource Include="Resources\drawable\Apm.png" />
+    <AndroidResource Include="Resources\drawable\app123.png" />
+    <AndroidResource Include="Resources\drawable\app1234.png" />
+    <AndroidResource Include="Resources\drawable\arowdown.png" />
+    <AndroidResource Include="Resources\drawable\arownext.png" />
+    <AndroidResource Include="Resources\drawable\arowper.png" />
+    <AndroidResource Include="Resources\drawable\arowup1.png" />
+    <AndroidResource Include="Resources\drawable\arrowup.png" />
+    <AndroidResource Include="Resources\drawable\bell123.png" />
+    <AndroidResource Include="Resources\drawable\bellnew123.png" />
+    <AndroidResource Include="Resources\drawable\blood.png" />
+    <AndroidResource Include="Resources\drawable\bloodnew.png" />
+    <AndroidResource Include="Resources\drawable\bones.png" />
+    <AndroidResource Include="Resources\drawable\bonesnew.png" />
+    <AndroidResource Include="Resources\drawable\boy.png" />
+    <AndroidResource Include="Resources\drawable\button_add.png" />
+    <AndroidResource Include="Resources\drawable\button_add1.png" />
+    <AndroidResource Include="Resources\drawable\calendar123.png" />
+    <AndroidResource Include="Resources\drawable\camera.png" />
+    <AndroidResource Include="Resources\drawable\cameramini.png" />
+    <AndroidResource Include="Resources\drawable\cancel1.png" />
+    <AndroidResource Include="Resources\drawable\cdiary.png" />
+    <AndroidResource Include="Resources\drawable\city.png" />
+    <AndroidResource Include="Resources\drawable\city1.png" />
+    <AndroidResource Include="Resources\drawable\clicnicbl.png" />
+    <AndroidResource Include="Resources\drawable\clinic.png" />
+    <AndroidResource Include="Resources\drawable\clinic1.png" />
+    <AndroidResource Include="Resources\drawable\clinich.png" />
+    <AndroidResource Include="Resources\drawable\clock.png" />
+    <AndroidResource Include="Resources\drawable\clock1.png" />
+    <AndroidResource Include="Resources\drawable\close.png" />
+    <AndroidResource Include="Resources\drawable\cmy.png" />
+    <AndroidResource Include="Resources\drawable\cmyname.png" />
+    <AndroidResource Include="Resources\drawable\cmyname1.png" />
+    <AndroidResource Include="Resources\drawable\contacts.png" />
+    <AndroidResource Include="Resources\drawable\country.png" />
+    <AndroidResource Include="Resources\drawable\county.png" />
+    <AndroidResource Include="Resources\drawable\dairy.png" />
+    <AndroidResource Include="Resources\drawable\del.png" />
+    <AndroidResource Include="Resources\drawable\delete.png" />
+    <AndroidResource Include="Resources\drawable\delete1.png" />
+    <AndroidResource Include="Resources\drawable\delete2.png" />
+    <AndroidResource Include="Resources\drawable\delete123.png" />
+    <AndroidResource Include="Resources\drawable\delete123A.png" />
+    <AndroidResource Include="Resources\drawable\deleteclinic.png" />
+    <AndroidResource Include="Resources\drawable\deletefile.png" />
+    <AndroidResource Include="Resources\drawable\deleteupload.png" />
+    <AndroidResource Include="Resources\drawable\deletev0.png" />
+    <AndroidResource Include="Resources\drawable\diary.png" />
+    <AndroidResource Include="Resources\drawable\diskette.png" />
+    <AndroidResource Include="Resources\drawable\dnabtn.png" />
+    <AndroidResource Include="Resources\drawable\dob.png" />
+    <AndroidResource Include="Resources\drawable\doc123.png" />
+    <AndroidResource Include="Resources\drawable\doctor.png" />
+    <AndroidResource Include="Resources\drawable\doctor1.png" />
+    <AndroidResource Include="Resources\drawable\Documents.png" />
+    <AndroidResource Include="Resources\drawable\Documents1.png" />
+    <AndroidResource Include="Resources\drawable\downarow1.png" />
+    <AndroidResource Include="Resources\drawable\downarrow.png" />
+    <AndroidResource Include="Resources\drawable\Drtype.png" />
+    <AndroidResource Include="Resources\drawable\edit.png" />
+    <AndroidResource Include="Resources\drawable\edit1.png" />
+    <AndroidResource Include="Resources\drawable\edit2.png" />
+    <AndroidResource Include="Resources\drawable\edit123.png" />
+    <AndroidResource Include="Resources\drawable\edit123A.png" />
+    <AndroidResource Include="Resources\drawable\editclinic.png" />
+    <AndroidResource Include="Resources\drawable\editicon.png" />
+    <AndroidResource Include="Resources\drawable\editmyentry.png" />
+    <AndroidResource Include="Resources\drawable\editphoto.png" />
+    <AndroidResource Include="Resources\drawable\email.png" />
+    <AndroidResource Include="Resources\drawable\email1.png" />
+    <AndroidResource Include="Resources\drawable\Emailg.png" />
+    <AndroidResource Include="Resources\drawable\emailga.png" />
+    <AndroidResource Include="Resources\drawable\expen.png" />
+    <AndroidResource Include="Resources\drawable\expen1.png" />
+    <AndroidResource Include="Resources\drawable\facebook.png" />
+    <AndroidResource Include="Resources\drawable\family.png" />
+    <AndroidResource Include="Resources\drawable\fitness.png" />
+    <AndroidResource Include="Resources\drawable\fitnessnew.png" />
+    <AndroidResource Include="Resources\drawable\forward.png" />
+    <AndroidResource Include="Resources\drawable\friday.png" />
+    <AndroidResource Include="Resources\drawable\gender.png" />
+    <AndroidResource Include="Resources\drawable\gmcno.png" />
+    <AndroidResource Include="Resources\drawable\gmcno1.png" />
+    <AndroidResource Include="Resources\drawable\googleplus.png" />
+    <AndroidResource Include="Resources\drawable\gp_invert.png" />
+    <AndroidResource Include="Resources\drawable\gp.png" />
+    <AndroidResource Include="Resources\drawable\gpdetails.png" />
+    <AndroidResource Include="Resources\drawable\hamburgerios.png" />
+    <AndroidResource Include="Resources\drawable\heart.png" />
+    <AndroidResource Include="Resources\drawable\heartnew.png" />
+    <AndroidResource Include="Resources\drawable\Hedit.png" />
+    <AndroidResource Include="Resources\drawable\hm.png" />
+    <AndroidResource Include="Resources\drawable\Hmobile.png" />
+    <AndroidResource Include="Resources\drawable\home1234.png" />
+    <AndroidResource Include="Resources\drawable\homenew123.png" />
+    <AndroidResource Include="Resources\drawable\hormones.png" />
+    <AndroidResource Include="Resources\drawable\hormonesnew.png" />
+    <AndroidResource Include="Resources\drawable\hv.png" />
+    <AndroidResource Include="Resources\drawable\iconEmail.png" />
+    <AndroidResource Include="Resources\drawable\iconPassword.png" />
+    <AndroidResource Include="Resources\drawable\iconUsername.png" />
+    <AndroidResource Include="Resources\drawable\imglogoupload.png" />
+    <AndroidResource Include="Resources\drawable\instagram.png" />
+    <AndroidResource Include="Resources\drawable\key.png" />
+    <AndroidResource Include="Resources\drawable\kidneys123.png" />
+    <AndroidResource Include="Resources\drawable\kidneysnew.png" />
+    <AndroidResource Include="Resources\drawable\landline.png" />
+    <AndroidResource Include="Resources\drawable\landline1.png" />
+    <AndroidResource Include="Resources\drawable\leads.png" />
+    <AndroidResource Include="Resources\drawable\Letter.png" />
+    <AndroidResource Include="Resources\drawable\liver.png" />
+    <AndroidResource Include="Resources\drawable\livernew.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\logo1.png" />
+    <AndroidResource Include="Resources\drawable\logout_menu.png" />
+    <AndroidResource Include="Resources\drawable\man.png" />
+    <AndroidResource Include="Resources\drawable\markdna.png" />
+    <AndroidResource Include="Resources\drawable\markdna1.png" />
+    <AndroidResource Include="Resources\drawable\Mdairy.png" />
+    <AndroidResource Include="Resources\drawable\medicalh.png" />
+    <AndroidResource Include="Resources\drawable\Medications.png" />
+    <AndroidResource Include="Resources\drawable\membership.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\Mhistory.png" />
+    <AndroidResource Include="Resources\drawable\Mhome.png" />
+    <AndroidResource Include="Resources\drawable\Mlogout.png" />
+    <AndroidResource Include="Resources\drawable\mobile.png" />
+    <AndroidResource Include="Resources\drawable\mobile1.png" />
+    <AndroidResource Include="Resources\drawable\monday.png" />
+    <AndroidResource Include="Resources\drawable\monitor.png" />
+    <AndroidResource Include="Resources\drawable\Msettings.png" />
+    <AndroidResource Include="Resources\drawable\name.png" />
+    <AndroidResource Include="Resources\drawable\name1.png" />
+    <AndroidResource Include="Resources\drawable\next.png" />
+    <AndroidResource Include="Resources\drawable\nurse.png" />
+    <AndroidResource Include="Resources\drawable\nurse1.png" />
+    <AndroidResource Include="Resources\drawable\open.png" />
+    <AndroidResource Include="Resources\drawable\openclinic.png" />
+    <AndroidResource Include="Resources\drawable\opportunities.png" />
+    <AndroidResource Include="Resources\drawable\payment.png" />
+    <AndroidResource Include="Resources\drawable\pharmacies.png" />
+    <AndroidResource Include="Resources\drawable\phone_invert.png" />
+    <AndroidResource Include="Resources\drawable\phone.png" />
+    <AndroidResource Include="Resources\drawable\plus.png" />
+    <AndroidResource Include="Resources\drawable\postalcode.png" />
+    <AndroidResource Include="Resources\drawable\postalcode1.png" />
+    <AndroidResource Include="Resources\drawable\prfl.png" />
+    <AndroidResource Include="Resources\drawable\pro_qly.png" />
+    <AndroidResource Include="Resources\drawable\pro_qly1.png" />
+    <AndroidResource Include="Resources\drawable\profexp.png" />
+    <AndroidResource Include="Resources\drawable\profexp1.png" />
+    <AndroidResource Include="Resources\drawable\profile.png" />
+    <AndroidResource Include="Resources\drawable\ratchet.png" />
+    <AndroidResource Include="Resources\drawable\remove.png" />
+    <AndroidResource Include="Resources\drawable\remove1.png" />
+    <AndroidResource Include="Resources\drawable\reschl.png" />
+    <AndroidResource Include="Resources\drawable\saturday.png" />
+    <AndroidResource Include="Resources\drawable\save.png" />
+    <AndroidResource Include="Resources\drawable\scott.png" />
+    <AndroidResource Include="Resources\drawable\scott159.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\singupload.png" />
+    <AndroidResource Include="Resources\drawable\sms.png" />
+    <AndroidResource Include="Resources\drawable\Soffline1.png" />
+    <AndroidResource Include="Resources\drawable\Sonline.png" />
+    <AndroidResource Include="Resources\drawable\Sonline1.png" />
+    <AndroidResource Include="Resources\drawable\specialist_invert.png" />
+    <AndroidResource Include="Resources\drawable\specialist.png" />
+    <AndroidResource Include="Resources\drawable\spinner_arrow.png" />
+    <AndroidResource Include="Resources\drawable\splash1.png" />
+    <AndroidResource Include="Resources\drawable\spltye.png" />
+    <AndroidResource Include="Resources\drawable\stress.png" />
+    <AndroidResource Include="Resources\drawable\stressnew.png" />
+    <AndroidResource Include="Resources\drawable\sunday.png" />
+    <AndroidResource Include="Resources\drawable\tdl.png" />
+    <AndroidResource Include="Resources\drawable\test1.png" />
+    <AndroidResource Include="Resources\drawable\test2.png" />
+    <AndroidResource Include="Resources\drawable\testkids.png" />
+    <AndroidResource Include="Resources\drawable\testUser.png" />
+    <AndroidResource Include="Resources\drawable\therapist_invert.png" />
+    <AndroidResource Include="Resources\drawable\Therapist.png" />
+    <AndroidResource Include="Resources\drawable\thursday.png" />
+    <AndroidResource Include="Resources\drawable\time.png" />
+    <AndroidResource Include="Resources\drawable\tuesday.png" />
+    <AndroidResource Include="Resources\drawable\twitter.png" />
+    <AndroidResource Include="Resources\drawable\uparrow1.png" />
+    <AndroidResource Include="Resources\drawable\uploaddoc.png" />
+    <AndroidResource Include="Resources\drawable\Uploadfile.png" />
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\drawable\user123.png" />
+    <AndroidResource Include="Resources\drawable\vc.png" />
+    <AndroidResource Include="Resources\drawable\video_invert.png" />
+    <AndroidResource Include="Resources\drawable\video.png" />
+    <AndroidResource Include="Resources\drawable\videochat.png" />
+    <AndroidResource Include="Resources\drawable\view.png" />
+    <AndroidResource Include="Resources\drawable\viewphoto.png" />
+    <AndroidResource Include="Resources\drawable\Viewv0.png" />
+    <AndroidResource Include="Resources\drawable\vitamins.png" />
+    <AndroidResource Include="Resources\drawable\wednesday.png" />
+    <AndroidResource Include="Resources\drawable\weight.png" />
+    <AndroidResource Include="Resources\drawable\weightnew.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\addfile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\address.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\addtoolbar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\city.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clicnicbl.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cmy.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\country.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\county.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Deletefile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dob.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Drtype.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editmyentry.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\expen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gmcno.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Hmobile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\imglogoupload.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\landline.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mobile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\postalcode.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\prfl.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\remove.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\singupload.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spltye.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\uploadfile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\addfile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\address.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\addtoolbar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\city.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clicnicbl.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cmy.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\country.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\county.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Deletefile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dob.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Drtype.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editmyentry.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\expen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gmcno.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Hmobile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imglogoupload.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\landline.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mobile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\postalcode.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\prfl.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\remove.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\singupload.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spltye.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\uploadfile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\user.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\addfile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\address.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\addtoolbar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\city.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clicnicbl.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cmy.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\country.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\county.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Deletefile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dob.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Drtype.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\editmyentry.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\expen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gmcno.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Hmobile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\imglogoupload.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\landline.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mobile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\postalcode.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\prfl.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\remove.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\singupload.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spltye.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\uploadfile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\user.png" />
+    <AndroidResource Include="Resources\drawable\tick.png" />
+    <AndroidResource Include="Resources\drawable\file.png" />
+    <AndroidResource Include="Resources\drawable\upload.png" />
+    <AndroidResource Include="Resources\drawable\img_file.png" />
+    <AndroidResource Include="Resources\drawable\pdf_file.png" />
+    <AndroidResource Include="Resources\drawable\ppt_file.png" />
+    <AndroidResource Include="Resources\drawable\doc_file.png" />
+    <AndroidResource Include="Resources\drawable\excel_file.png" />
+    <AndroidResource Include="Resources\drawable\text_file.png" />
+    <AndroidResource Include="Resources\drawable\audio_file.png" />
+    <AndroidResource Include="Resources\drawable\video_file.png" />
+    <AndroidResource Include="Resources\drawable\previewdata.png" />
+    <AndroidResource Include="Resources\drawable\previewdelete.png" />
+    <AndroidResource Include="Resources\drawable\complete.png" />
+    <AndroidResource Include="Resources\drawable\succ.png" />
+    <AndroidResource Include="Resources\layout\myspinner.xml" />
+    <AndroidResource Include="Resources\layout\spinner_item.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderer\" />
+    <Folder Include="Renderer\filepicker\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Transition.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Transition.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Design.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.CardView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.Palette.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.Palette.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.Palette.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.Palette.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.MediaRouter.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.MediaRouter.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.v7.MediaRouter.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

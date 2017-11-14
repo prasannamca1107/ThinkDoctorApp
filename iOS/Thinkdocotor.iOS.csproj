@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9DBEE6C2-9C2A-4EFB-A04F-8E919FF59BC4}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Thinkdocotor.iOS</RootNamespace>
+    <AssemblyName>Thinkdocotor.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>20292</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>33390</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.IOS">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Messier16.Forms.Controls">
+      <HintPath>..\packages\Messier16.Forms.Controls.1.1.0\lib\Xamarin.iOS10\Messier16.Forms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Messier16.Forms.iOS.Controls">
+      <HintPath>..\packages\Messier16.Forms.Controls.1.1.0\lib\Xamarin.iOS10\Messier16.Forms.iOS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Xfx.Controls">
+      <HintPath>..\packages\Xfx.Controls.1.0.4\lib\Xamarin.iOS10\Xfx.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Xfx.Controls.iOS">
+      <HintPath>..\packages\Xfx.Controls.1.0.4\lib\Xamarin.iOS10\Xfx.Controls.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\Xamarin.iOS10\Syncfusion.SfAutoComplete.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\Xamarin.iOS10\Syncfusion.SfAutoComplete.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfAutoComplete.15.3.0.33\lib\Xamarin.iOS10\Syncfusion.SfAutoComplete.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="DLToolkit.Forms.Controls.FlowListView">
+      <HintPath>..\packages\DLToolkit.Forms.Controls.FlowListView.2.0.9\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0\DLToolkit.Forms.Controls.FlowListView.dll</HintPath>
+    </Reference>
+    <Reference Include="AsNum.XFControls">
+      <HintPath>..\packages\XFControls.1.0.0.6\lib\Xamarin.iOS10\AsNum.XFControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AsNum.XFControls.iOS">
+      <HintPath>..\packages\XFControls.1.0.0.6\lib\Xamarin.iOS10\AsNum.XFControls.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thinkdocotor\Thinkdocotor.csproj">
+      <Project>{9BF4DE40-0674-4E6A-B1C4-E001B090383B}</Project>
+      <Name>Thinkdocotor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Renderer\" />
+    <Folder Include="Resources\BG\" />
+    <Folder Include="Resources\Docotor\" />
+    <Folder Include="Renderer\filepicker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderer\UnderlineRenderer.cs" />
+    <Compile Include="Renderer\MyEntryRenderer.cs" />
+    <Compile Include="Renderer\CustomFrameRendererIos.cs" />
+    <Compile Include="Renderer\IconViewRenderer.cs" />
+    <Compile Include="Renderer\RoundImageRenderer.cs" />
+    <Compile Include="Renderer\DataViewer.cs" />
+    <Compile Include="Renderer\filepicker\CrossFilePicker.cs" />
+    <Compile Include="Renderer\filepicker\FilePickerImplementation.cs" />
+    <Compile Include="Renderer\GradientPageRenderer.cs" />
+    <Compile Include="Renderer\DropDownMenuRender_iOS.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Renderer\MyScrollRender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ThinkdoctorLogo.png" />
+    <BundleResource Include="Resources\usericon%401x.png" />
+    <BundleResource Include="Resources\usericon%402x.png" />
+    <BundleResource Include="Resources\usericon%403x.png" />
+    <BundleResource Include="Resources\iconpasw%401x.png" />
+    <BundleResource Include="Resources\iconpasw%402x.png" />
+    <BundleResource Include="Resources\iconpasw%403x.png" />
+    <BundleResource Include="Resources\line.png" />
+    <BundleResource Include="Resources\BG\Bg320x568.png" />
+    <BundleResource Include="Resources\BG\Bg375x667.png" />
+    <BundleResource Include="Resources\BG\Bg414x736.png" />
+    <BundleResource Include="Resources\BG\Bg768x1024.png" />
+    <BundleResource Include="Resources\BG\Bg1536x2048.png" />
+    <BundleResource Include="Resources\accounts.png" />
+    <BundleResource Include="Resources\diarynew.png" />
+    <BundleResource Include="Resources\diarytab.png" />
+    <BundleResource Include="Resources\Doc.png" />
+    <BundleResource Include="Resources\historytab.png" />
+    <BundleResource Include="Resources\hometab.png" />
+    <BundleResource Include="Resources\manage_patients.png" />
+    <BundleResource Include="Resources\patients.png" />
+    <BundleResource Include="Resources\reports.png" />
+    <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\arrowNxt.png" />
+    <BundleResource Include="Resources\userdefault.png" />
+    <BundleResource Include="Resources\Docotor\addfile%401x.png" />
+    <BundleResource Include="Resources\Docotor\addfile%402x.png" />
+    <BundleResource Include="Resources\Docotor\addfile%403x.png" />
+    <BundleResource Include="Resources\Docotor\address%401x.png" />
+    <BundleResource Include="Resources\Docotor\address%402x.png" />
+    <BundleResource Include="Resources\Docotor\address%403x.png" />
+    <BundleResource Include="Resources\Docotor\city%401x.png" />
+    <BundleResource Include="Resources\Docotor\city%402x.png" />
+    <BundleResource Include="Resources\Docotor\city%403x.png" />
+    <BundleResource Include="Resources\Docotor\clicnicbl%401x.png" />
+    <BundleResource Include="Resources\Docotor\clicnicbl%402x.png" />
+    <BundleResource Include="Resources\Docotor\clicnicbl%403x.png" />
+    <BundleResource Include="Resources\Docotor\cmy%401x.png" />
+    <BundleResource Include="Resources\Docotor\cmy%402x.png" />
+    <BundleResource Include="Resources\Docotor\cmy%403x.png" />
+    <BundleResource Include="Resources\Docotor\country%401x.png" />
+    <BundleResource Include="Resources\Docotor\country%402x.png" />
+    <BundleResource Include="Resources\Docotor\country%403x.png" />
+    <BundleResource Include="Resources\Docotor\county%401x.png" />
+    <BundleResource Include="Resources\Docotor\county%402x.png" />
+    <BundleResource Include="Resources\Docotor\county%403x.png" />
+    <BundleResource Include="Resources\Docotor\deleteclinic%401x.png" />
+    <BundleResource Include="Resources\Docotor\deleteclinic%402x.png" />
+    <BundleResource Include="Resources\Docotor\deleteclinic%403x.png" />
+    <BundleResource Include="Resources\Docotor\Deletefile%401x.png" />
+    <BundleResource Include="Resources\Docotor\Deletefile%402x.png" />
+    <BundleResource Include="Resources\Docotor\Deletefile%403x.png" />
+    <BundleResource Include="Resources\Docotor\dob%401x.png" />
+    <BundleResource Include="Resources\Docotor\dob%402x.png" />
+    <BundleResource Include="Resources\Docotor\dob%403x.png" />
+    <BundleResource Include="Resources\Docotor\Drtype%401x.png" />
+    <BundleResource Include="Resources\Docotor\Drtype%402x.png" />
+    <BundleResource Include="Resources\Docotor\Drtype%403x.png" />
+    <BundleResource Include="Resources\Docotor\editclinic%401x.png" />
+    <BundleResource Include="Resources\Docotor\editclinic%402x.png" />
+    <BundleResource Include="Resources\Docotor\editclinic%403x.png" />
+    <BundleResource Include="Resources\Docotor\editmyentry%401x.png" />
+    <BundleResource Include="Resources\Docotor\editmyentry%402x.png" />
+    <BundleResource Include="Resources\Docotor\editmyentry%403x.png" />
+    <BundleResource Include="Resources\Docotor\email%401x.png" />
+    <BundleResource Include="Resources\Docotor\email%402x.png" />
+    <BundleResource Include="Resources\Docotor\email%403x.png" />
+    <BundleResource Include="Resources\Docotor\expen%401x.png" />
+    <BundleResource Include="Resources\Docotor\expen%402x.png" />
+    <BundleResource Include="Resources\Docotor\expen1%403x.png" />
+    <BundleResource Include="Resources\Docotor\gmcno%401x.png" />
+    <BundleResource Include="Resources\Docotor\gmcno%402x.png" />
+    <BundleResource Include="Resources\Docotor\gmcno%403x.png" />
+    <BundleResource Include="Resources\Docotor\Hmobile%401x.png" />
+    <BundleResource Include="Resources\Docotor\Hmobile%402x.png" />
+    <BundleResource Include="Resources\Docotor\Hmobile%403x.png" />
+    <BundleResource Include="Resources\Docotor\imglogoupload%401x.png" />
+    <BundleResource Include="Resources\Docotor\imglogoupload%402x.png" />
+    <BundleResource Include="Resources\Docotor\imglogoupload%403x.png" />
+    <BundleResource Include="Resources\Docotor\landline%401x.png" />
+    <BundleResource Include="Resources\Docotor\landline%402x.png" />
+    <BundleResource Include="Resources\Docotor\landline%403x.png" />
+    <BundleResource Include="Resources\Docotor\mobile%401x.png" />
+    <BundleResource Include="Resources\Docotor\mobile%402x.png" />
+    <BundleResource Include="Resources\Docotor\mobile%403x.png" />
+    <BundleResource Include="Resources\Docotor\Nextpage%401x.png" />
+    <BundleResource Include="Resources\Docotor\Nextpage%402x.png" />
+    <BundleResource Include="Resources\Docotor\Nextpage%403x.png" />
+    <BundleResource Include="Resources\Docotor\postalcode%401x.png" />
+    <BundleResource Include="Resources\Docotor\postalcode%402x.png" />
+    <BundleResource Include="Resources\Docotor\postalcode%403x.png" />
+    <BundleResource Include="Resources\Docotor\prfl%401x.png" />
+    <BundleResource Include="Resources\Docotor\prfl%402x.png" />
+    <BundleResource Include="Resources\Docotor\prfl%403x.png" />
+    <BundleResource Include="Resources\Docotor\remove%401x.png" />
+    <BundleResource Include="Resources\Docotor\remove%402x.png" />
+    <BundleResource Include="Resources\Docotor\remove%403x.png" />
+    <BundleResource Include="Resources\Docotor\save%401x.png" />
+    <BundleResource Include="Resources\Docotor\save%402x.png" />
+    <BundleResource Include="Resources\Docotor\save%403x.png" />
+    <BundleResource Include="Resources\Docotor\search%401x.png" />
+    <BundleResource Include="Resources\Docotor\search%402x.png" />
+    <BundleResource Include="Resources\Docotor\search%403x.png" />
+    <BundleResource Include="Resources\Docotor\singupload%401x.png" />
+    <BundleResource Include="Resources\Docotor\singupload%402x.png" />
+    <BundleResource Include="Resources\Docotor\singupload%403x.png" />
+    <BundleResource Include="Resources\Docotor\spltye%401x.png" />
+    <BundleResource Include="Resources\Docotor\spltye%402x.png" />
+    <BundleResource Include="Resources\Docotor\spltye%403x.png" />
+    <BundleResource Include="Resources\Docotor\uploadfile%401x.png" />
+    <BundleResource Include="Resources\Docotor\uploadfile%402x.png" />
+    <BundleResource Include="Resources\Docotor\uploadfile%403x.png" />
+    <BundleResource Include="Resources\Docotor\user%401x.png" />
+    <BundleResource Include="Resources\Docotor\user%402x.png" />
+    <BundleResource Include="Resources\Docotor\user%403x.png" />
+    <BundleResource Include="Resources\radiooff.png" />
+    <BundleResource Include="Resources\radioon.png" />
+    <BundleResource Include="Resources\editdate%401x.png" />
+    <BundleResource Include="Resources\editdate%402x.png" />
+    <BundleResource Include="Resources\editdate%403x.png" />
+    <BundleResource Include="Resources\tick%401x.png" />
+    <BundleResource Include="Resources\tick%402x.png" />
+    <BundleResource Include="Resources\tick%403x.png" />
+    <BundleResource Include="Resources\acc1.png" />
+    <BundleResource Include="Resources\acc123.png" />
+    <BundleResource Include="Resources\acc12341.png" />
+    <BundleResource Include="Resources\account.png" />
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\add1.png" />
+    <BundleResource Include="Resources\add2.png" />
+    <BundleResource Include="Resources\add11.png" />
+    <BundleResource Include="Resources\add21.png" />
+    <BundleResource Include="Resources\addclinic%401x.png" />
+    <BundleResource Include="Resources\addclinic%402x.png" />
+    <BundleResource Include="Resources\addclinic%403x.png" />
+    <BundleResource Include="Resources\addphoto.png" />
+    <BundleResource Include="Resources\admin.png" />
+    <BundleResource Include="Resources\admin1.png" />
+    <BundleResource Include="Resources\alert123.png" />
+    <BundleResource Include="Resources\alert1234.png" />
+    <BundleResource Include="Resources\Apm.png" />
+    <BundleResource Include="Resources\app123.png" />
+    <BundleResource Include="Resources\app1234.png" />
+    <BundleResource Include="Resources\arowdown%401x.png" />
+    <BundleResource Include="Resources\arowdown%402x.png" />
+    <BundleResource Include="Resources\arowdown%403x.png" />
+    <BundleResource Include="Resources\arownext.png" />
+    <BundleResource Include="Resources\arowper.png" />
+    <BundleResource Include="Resources\arowup.png" />
+    <BundleResource Include="Resources\arowup1.png" />
+    <BundleResource Include="Resources\arrowup.png" />
+    <BundleResource Include="Resources\audio_file.png" />
+    <BundleResource Include="Resources\beer_filled.png" />
+    <BundleResource Include="Resources\beer_filled%402x.png" />
+    <BundleResource Include="Resources\beer_filled%403x.png" />
+    <BundleResource Include="Resources\beer.png" />
+    <BundleResource Include="Resources\beer%402x.png" />
+    <BundleResource Include="Resources\beer%403x.png" />
+    <BundleResource Include="Resources\bell123.png" />
+    <BundleResource Include="Resources\Bg.png" />
+    <BundleResource Include="Resources\bkgd131.jpg" />
+    <BundleResource Include="Resources\button_cancel.png" />
+    <BundleResource Include="Resources\button_documents.png" />
+    <BundleResource Include="Resources\button_reschedule.png" />
+    <BundleResource Include="Resources\calendar_bg_selector.xml" />
+    <BundleResource Include="Resources\calendar123.png" />
+    <BundleResource Include="Resources\camera.png" />
+    <BundleResource Include="Resources\cancel1.png" />
+    <BundleResource Include="Resources\cdiary.png" />
+    <BundleResource Include="Resources\checked_checkbox.png" />
+    <BundleResource Include="Resources\city.png" />
+    <BundleResource Include="Resources\city1.png" />
+    <BundleResource Include="Resources\clicnicbl.png" />
+    <BundleResource Include="Resources\clinic.png" />
+    <BundleResource Include="Resources\clinic1.png" />
+    <BundleResource Include="Resources\clock.png" />
+    <BundleResource Include="Resources\clock1.png" />
+    <BundleResource Include="Resources\close.png" />
+    <BundleResource Include="Resources\cmyname.png" />
+    <BundleResource Include="Resources\cmyname1.png" />
+    <BundleResource Include="Resources\contacts.png" />
+    <BundleResource Include="Resources\dairy.png" />
+    <BundleResource Include="Resources\defalutdoctor.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default1.png" />
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\delete1.png" />
+    <BundleResource Include="Resources\delete1%402x.png" />
+    <BundleResource Include="Resources\delete2.png" />
+    <BundleResource Include="Resources\delete2%402x.png" />
+    <BundleResource Include="Resources\delete123.png" />
+    <BundleResource Include="Resources\deleteclinic%401x.png" />
+    <BundleResource Include="Resources\deleteclinic%402x.png" />
+    <BundleResource Include="Resources\deleteclinic%403x.png" />
+    <BundleResource Include="Resources\deletefile%401x.png" />
+    <BundleResource Include="Resources\deletefile%402x.png" />
+    <BundleResource Include="Resources\deletefile%403x.png" />
+    <BundleResource Include="Resources\deleteupload.png" />
+    <BundleResource Include="Resources\deletev0.png" />
+    <BundleResource Include="Resources\diary-1.png" />
+    <BundleResource Include="Resources\diary.png" />
+    <BundleResource Include="Resources\diskette.png" />
+    <BundleResource Include="Resources\dnabtn.png" />
+    <BundleResource Include="Resources\dob.png" />
+    <BundleResource Include="Resources\doc_file.png" />
+    <BundleResource Include="Resources\doc123.png" />
+    <BundleResource Include="Resources\doctor.png" />
+    <BundleResource Include="Resources\doctor1.png" />
+    <BundleResource Include="Resources\Documents.png" />
+    <BundleResource Include="Resources\Documents1.png" />
+    <BundleResource Include="Resources\downarow1.png" />
+    <BundleResource Include="Resources\downarrow.png" />
+    <BundleResource Include="Resources\dropdown.png" />
+    <BundleResource Include="Resources\dropdown1.png" />
+    <BundleResource Include="Resources\dropdown2.png" />
+    <BundleResource Include="Resources\dropdown3.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\edit1.png" />
+    <BundleResource Include="Resources\edit123.png" />
+    <BundleResource Include="Resources\editicon.png" />
+    <BundleResource Include="Resources\editlist.ico" />
+    <BundleResource Include="Resources\editmyentry.png" />
+    <BundleResource Include="Resources\editphoto.png" />
+    <BundleResource Include="Resources\email1.png" />
+    <BundleResource Include="Resources\Emailg.png" />
+    <BundleResource Include="Resources\emailga.png" />
+    <BundleResource Include="Resources\entry_border.xml" />
+    <BundleResource Include="Resources\excel_file.png" />
+    <BundleResource Include="Resources\expen.png" />
+    <BundleResource Include="Resources\expen1.png" />
+    <BundleResource Include="Resources\file%401x.png" />
+    <BundleResource Include="Resources\file%402x.png" />
+    <BundleResource Include="Resources\file%403x.png" />
+    <BundleResource Include="Resources\friday.png" />
+    <BundleResource Include="Resources\gender.png" />
+    <BundleResource Include="Resources\gmcno.png" />
+    <BundleResource Include="Resources\gmcno1.png" />
+    <BundleResource Include="Resources\gridpage.cs" />
+    <BundleResource Include="Resources\Hedit.png" />
+    <BundleResource Include="Resources\Hmobile.png" />
+    <BundleResource Include="Resources\home123.png" />
+    <BundleResource Include="Resources\home1234.png" />
+    <BundleResource Include="Resources\homenew123.png" />
+    <BundleResource Include="Resources\hv.png" />
+    <BundleResource Include="Resources\ic_checkmark_active.png" />
+    <BundleResource Include="Resources\ic_checkmark_active%402x.png" />
+    <BundleResource Include="Resources\ic_checkmark_active%403x.png" />
+    <BundleResource Include="Resources\ic_checkmark_unactive.png" />
+    <BundleResource Include="Resources\ic_checkmark_unactive%402x.png" />
+    <BundleResource Include="Resources\ic_checkmark_unactive%403x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\iconEmail.png" />
+    <BundleResource Include="Resources\iconPassword.png" />
+    <BundleResource Include="Resources\iconUsername.png" />
+    <BundleResource Include="Resources\img_file.png" />
+    <BundleResource Include="Resources\imglogoupload.png" />
+    <BundleResource Include="Resources\key.png" />
+    <BundleResource Include="Resources\landline.png" />
+    <BundleResource Include="Resources\landline1.png" />
+    <BundleResource Include="Resources\leads.png" />
+    <BundleResource Include="Resources\Letter.png" />
+    <BundleResource Include="Resources\loading.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
+    <BundleResource Include="Resources\logo1.png" />
+    <BundleResource Include="Resources\logout_menu.png" />
+    <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\markdna.png" />
+    <BundleResource Include="Resources\markdna1.png" />
+    <BundleResource Include="Resources\Mdairy.png" />
+    <BundleResource Include="Resources\Mhistory.png" />
+    <BundleResource Include="Resources\Mhome.png" />
+    <BundleResource Include="Resources\Mlogout.png" />
+    <BundleResource Include="Resources\mobile1.png" />
+    <BundleResource Include="Resources\monday.png" />
+    <BundleResource Include="Resources\Msettings.png" />
+    <BundleResource Include="Resources\name.png" />
+    <BundleResource Include="Resources\name1.png" />
+    <BundleResource Include="Resources\next.png" />
+    <BundleResource Include="Resources\next%401x.png" />
+    <BundleResource Include="Resources\next%402x.png" />
+    <BundleResource Include="Resources\next%403x.png" />
+    <BundleResource Include="Resources\nurse.png" />
+    <BundleResource Include="Resources\nurse1.png" />
+    <BundleResource Include="Resources\open.png" />
+    <BundleResource Include="Resources\openclinic.png" />
+    <BundleResource Include="Resources\opportunities.png" />
+    <BundleResource Include="Resources\pdf_file.png" />
+    <BundleResource Include="Resources\postalcode.png" />
+    <BundleResource Include="Resources\postalcode1.png" />
+    <BundleResource Include="Resources\ppt_file.png" />
+    <BundleResource Include="Resources\preview.png" />
+    <BundleResource Include="Resources\previewdata.png" />
+    <BundleResource Include="Resources\previewdelete.png" />
+    <BundleResource Include="Resources\prfl.png" />
+    <BundleResource Include="Resources\prfl%401X.png" />
+    <BundleResource Include="Resources\prfl%403X.png" />
+    <BundleResource Include="Resources\pro_qly.png" />
+    <BundleResource Include="Resources\pro_qly1.png" />
+    <BundleResource Include="Resources\profexp.png" />
+    <BundleResource Include="Resources\profexp1.png" />
+    <BundleResource Include="Resources\radio1.png" />
+    <BundleResource Include="Resources\radio2.png" />
+    <BundleResource Include="Resources\rainDrops.jpg" />
+    <BundleResource Include="Resources\remove.png" />
+    <BundleResource Include="Resources\remove1.png" />
+    <BundleResource Include="Resources\reschl.png" />
+    <BundleResource Include="Resources\saturday.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\shadow.png" />
+    <BundleResource Include="Resources\shape.xml" />
+    <BundleResource Include="Resources\share%401x.png" />
+    <BundleResource Include="Resources\share%402x.png" />
+    <BundleResource Include="Resources\share%403x.png" />
+    <BundleResource Include="Resources\singupload.png" />
+    <BundleResource Include="Resources\sms.png" />
+    <BundleResource Include="Resources\Soffline1.png" />
+    <BundleResource Include="Resources\Sonline.png" />
+    <BundleResource Include="Resources\Sonline1.png" />
+    <BundleResource Include="Resources\sort-down.png" />
+    <BundleResource Include="Resources\star_filled.png" />
+    <BundleResource Include="Resources\star_filled%402x.png" />
+    <BundleResource Include="Resources\star_filled%403x.png" />
+    <BundleResource Include="Resources\star.png" />
+    <BundleResource Include="Resources\star%402x.png" />
+    <BundleResource Include="Resources\star%403x.png" />
+    <BundleResource Include="Resources\succ.png" />
+    <BundleResource Include="Resources\sunday.png" />
+    <BundleResource Include="Resources\test.jpg" />
+    <BundleResource Include="Resources\test1.png" />
+    <BundleResource Include="Resources\test2.png" />
+    <BundleResource Include="Resources\test123.jpg" />
+    <BundleResource Include="Resources\testUser.png" />
+    <BundleResource Include="Resources\text_file.png" />
+    <BundleResource Include="Resources\Therapist.png" />
+    <BundleResource Include="Resources\ThinkDocotrBG.png" />
+    <BundleResource Include="Resources\ThinkDocotrBG%402x.png" />
+    <BundleResource Include="Resources\ThinkDocotrBG%403x.png" />
+    <BundleResource Include="Resources\thursday.png" />
+    <BundleResource Include="Resources\tick.png" />
+    <BundleResource Include="Resources\tick1.png" />
+    <BundleResource Include="Resources\time.png" />
+    <BundleResource Include="Resources\tuesday.png" />
+    <BundleResource Include="Resources\unchecked_checkbox.png" />
+    <BundleResource Include="Resources\uparrow1.png" />
+    <BundleResource Include="Resources\upload%401x.png" />
+    <BundleResource Include="Resources\upload%402x.png" />
+    <BundleResource Include="Resources\upload%403x.png" />
+    <BundleResource Include="Resources\uploaddoc.png" />
+    <BundleResource Include="Resources\uploadfile.png" />
+    <BundleResource Include="Resources\Uploadfile%401x.png" />
+    <BundleResource Include="Resources\Uploadfile%402x.png" />
+    <BundleResource Include="Resources\Uploadfile%403x.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\user123.png" />
+    <BundleResource Include="Resources\vc.png" />
+    <BundleResource Include="Resources\video_file.png" />
+    <BundleResource Include="Resources\view.png" />
+    <BundleResource Include="Resources\viewphoto.png" />
+    <BundleResource Include="Resources\Viewv0.png" />
+    <BundleResource Include="Resources\wednesday.png" />
+    <BundleResource Include="Resources\word_doc.png" />
+    <BundleResource Include="Resources\complete%401x.png" />
+    <BundleResource Include="Resources\complete%402x.png" />
+    <BundleResource Include="Resources\complete%403x.png" />
+    <BundleResource Include="Resources\email%401x.png" />
+    <BundleResource Include="Resources\email%402x.png" />
+    <BundleResource Include="Resources\email%403x.png" />
+    <BundleResource Include="Resources\mobile%401x.png" />
+    <BundleResource Include="Resources\mobile%402x.png" />
+    <BundleResource Include="Resources\mobile%403x.png" />
+    <BundleResource Include="Resources\country%401x.png" />
+    <BundleResource Include="Resources\country%402x.png" />
+    <BundleResource Include="Resources\country%403x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>
